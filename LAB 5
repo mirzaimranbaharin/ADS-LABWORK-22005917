@@ -1,0 +1,36 @@
+int main() {
+    Stack stack;
+    int choice;
+    string value;
+    do {
+        cout << "Stack Menu" << endl;
+        cout << "1. Push node" << endl;
+        cout << "2. Peek Stack" << endl;
+        cout << "3. Pop Stack" << endl;
+        cout << "4. Exit" << endl;
+        cout << "Enter your choice: ";
+        cin >> choice;
+        switch (choice) {
+        case 1:
+            cout << "Enter value to add: ";
+            cin >> value;
+            stack.Push(value);
+            break;
+        case 2:
+            stack.Peek();
+            break;
+        case 3:
+            cout << "Deleting ";
+            stack.Peek();
+            stack.Pop();
+            cout << "Deleted" << endl;
+            break;
+        case 4:
+            cout << "Exiting..." << endl;
+            break;
+        default:
+            cout << "Invalid choice, please try again." << endl;
+        }
+    } while (choice != 4);
+    return 0;
+}
